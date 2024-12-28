@@ -58,7 +58,7 @@ Place the model file in the same directory as your project.
 
 Below is a demonstration video of the system in action:
 
-![Watch the demonstration video] ([https://your-video-link.com/demo.mp4](https://drive.google.com/file/d/1HqcEDdQW5IfOlafkeWf2a-4DX0i2J9h9/view?usp=sharing))
+[Watch the demonstration video]:--> ([https://your-video-link.com/demo.mp4](https://drive.google.com/file/d/1HqcEDdQW5IfOlafkeWf2a-4DX0i2J9h9/view?usp=sharing))
 
 
 ---
