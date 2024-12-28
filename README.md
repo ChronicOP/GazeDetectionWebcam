@@ -1,102 +1,103 @@
-Gaze Tracking System
+# Gaze Tracking System
 
-This project implements a real-time gaze tracking system using OpenCV, dlib, and Python. The application detects a user's face, identifies their eyes, and determines the direction they are looking: left, right, up, down, or center.
+This project is a **Gaze Tracking System** that detects facial landmarks and determines eye gaze direction, including left, right, up, and down. It uses OpenCV and Dlib for face and eye detection and requires a pre-trained model for landmark detection.
 
-Features
+---
 
-Real-Time Gaze Detection: Detects the user's gaze direction in real time.
+## Features
 
-Eye Landmark Detection: Uses dlib's 68-face landmarks to locate and analyze the eyes.
+- **Real-time Gaze Detection**: Determines gaze direction (left, right, up, down, or center).
+- **Robust Face and Eye Detection**: Uses Dlib's landmark predictor for precise detection.
+- **Cross-platform**: Works on multiple platforms with Python and OpenCV.
 
-Direction Analysis: Determines whether the user is looking left, right, up, down, or center.
+---
 
-Visual Feedback: Displays the gaze direction and eye landmarks on the video feed.
+## Prerequisites
 
-Requirements
+### Required Libraries
 
-Ensure the following dependencies are installed:
+Install the necessary dependencies using:
 
-Python 3.7 or higher
-
-OpenCV
-
-dlib
-
-NumPy
-
-Install them using the following command:
-
+```bash
 pip install opencv-python dlib numpy
+```
 
-Setup Instructions
+### Pre-trained Model
 
-Step 1: Download Pre-trained Model
+Download the `shape_predictor_68_face_landmarks.dat` model [here](https://github.com/davisking/dlib-models).
 
-This project uses dlib's 68-face landmark predictor. Download the pre-trained model shape_predictor_68_face_landmarks.dat from the following link:
+Place the model file in the same directory as your project.
 
-Download shape_predictor_68_face_landmarks.dat
+---
 
-After downloading, extract the file and place it in the root directory of the project.
+## Getting Started
 
-Step 2: Clone the Repository
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/gaze-tracking-system.git
+   cd gaze-tracking-system
+   ```
 
-Clone the project repository to your local machine:
+2. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-git clone https://github.com/yourusername/gaze-tracking-project.git
-cd gaze-tracking-project
+3. Run the project:
+   ```bash
+   python main.py
+   ```
 
-Step 3: Run the Application
+4. Ensure your webcam is working for live testing.
 
-Run the application using the following command:
+---
 
-python main.py
+## Demonstration
 
-Project Structure
+### Video Example
 
-|-- main.py                # Main application script
-|-- gaze_tracking.py       # Gaze tracking logic
-|-- shape_predictor_68_face_landmarks.dat # Pre-trained model
+Below is a demonstration video of the system in action:
 
-How It Works
+![Watch the demonstration video]([https://your-video-link.com/demo.mp4](https://drive.google.com/file/d/1HqcEDdQW5IfOlafkeWf2a-4DX0i2J9h9/view?usp=sharing))
 
-Face Detection: Detects the user's face in the video feed using dlib's frontal face detector.
 
-Eye Extraction: Identifies eye regions based on the 68-face landmark model.
+---
 
-Gaze Analysis: Analyzes the position of the iris in relation to the eye to determine gaze direction.
+## File Structure
 
-Real-Time Feedback: Displays gaze direction and eye landmarks on the video feed.
+```
+.
+├── main.py
+├── gaze_tracking.py
+├── requirements.txt
+├── shape_predictor_68_face_landmarks.dat
+├── README.md
+```
 
-Known Issues
+---
 
-The system may not work effectively in low-light conditions.
+## How It Works
 
-Glasses or extreme head movements may affect accuracy.
+1. Captures a video feed using OpenCV.
+2. Detects face and eyes using Dlib's frontal face detector.
+3. Analyzes eye regions to compute the gaze direction.
+4. Displays the gaze direction (left, right, up, down, center) on the live feed.
 
-Future Enhancements
+---
 
-Add calibration for individual users to improve accuracy.
+## Troubleshooting
 
-Include support for detecting blinks and closed eyes.
+- Ensure the `shape_predictor_68_face_landmarks.dat` file is correctly downloaded and placed in the project directory.
+- Verify your camera permissions and functionality.
 
-Enhance robustness to varying lighting conditions.
+---
 
-License
+## Contributing
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+Contributions are welcome! Feel free to submit a pull request or report issues.
 
-Acknowledgments
+---
 
-dlib Library
+## License
 
-OpenCV Documentation
-
-Contact
-
-For any questions or suggestions, please contact:
-
-Name: Your Name
-
-Email: your.email@example.com
-
-Enjoy using the gaze tracking system!
+This project is licensed under the MIT License.
